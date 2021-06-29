@@ -9,7 +9,7 @@ int main() {
     node* root; 
     ifstream fi; 
     int choose; 
-    
+
     do { 
         cout<<"\tHUFFMAN_CODE\t"<<endl; 
         cout<<"1.ENCODE FILE TEXT"<<endl; 
@@ -26,6 +26,7 @@ int main() {
             fi.close(); 
             root = huffman_code(s); 
             encode(s); 
+            // print encode in file encode.txt
             break;
         case 2: 
             cout<<"INPUT NAME FILE U WANT TO DECODE : "<<endl; 
@@ -34,6 +35,7 @@ int main() {
             getline(fi,s); 
             fi.close(); 
             decode(s,root); 
+            // print decode in file decode.txt
         case 3: 
             return 0; 
         default:
